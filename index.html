@@ -290,28 +290,29 @@ From foundations to finishing, we ensure durability, alignment, and structural i
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/pavers.webp" alt="">
+                    <img class="img-fluid" src="img/kitch.avif" alt="">
                     <div class="service-icon bg-white">
-                        <i class="fa fa-3x bi-app text-primary"></i>
+                        <!--<i class="fa fa-3x  bi-backpack text-primary"></i>-->
+                        <img class="img-fluid" src="img/kitchen (1).png" alt="" style="width: 60px; height: 60px;">
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Pavers</h4>
-                        <p>Premium paver installation designed for strength and visual appeal.
-From pathways to patios, we create outdoor surfaces that last.</p>
+                        <h4 class="text-uppercase mb-3">Kitchen</h4>
+                        <p>Well-planned kitchen spaces designed for comfort, storage, and smooth workflow.
+Built with precision, hygiene, and everyday practicality in mind.</p>
                       <!--  <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> -->
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/sheetrock.webp" alt="">
+                    <img class="img-fluid" src="img/bath2.avif" alt="">
                     <div class="service-icon bg-white">
-                        <i class="fa fa-3x bi-border-top text-primary"></i>
+                        <img class="img-fluid" src="img/sink.png"  style="width: 60px; height: 60px;" alt="">
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">sheetrock</h4>
-                        <p>Precision drywall solutions for residential and commercial interiors.
-From installation to finishing, we deliver seamless surfaces ready for paint.</p>
+                        <h4 class="text-uppercase mb-3">Bathroom</h4>
+                        <p>Professional bathroom construction and renovation with a focus on functionality and comfort.
+We deliver quality workmanship, proper waterproofing, and clean finishes.</p>
                       <!--  <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> -->
                     </div>
                 </div>
@@ -355,11 +356,27 @@ Schedule a callback and we will reach out as soon as possible to assist you.</p>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <div class="time" id="time" data-target-input="nearest" name="time">
-                                    <input type="text"
-                                        class="form-control border-0 datetimepicker-input"
-                                        placeholder="Call Back Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                <div class="time-picker">
+                                    <input  name = "time" type="text" class="form-control border-0" id="timeInput" placeholder="Select Time" readonly>
+                                    <div class="time-dropdown" id="timeDropdown">
+                                        <select id="hour">
+                                        <option>01</option><option>02</option><option>03</option>
+                                        <option>04</option><option>05</option><option>06</option>
+                                        <option>07</option><option>08</option><option>09</option>
+                                        <option>10</option><option>11</option><option>12</option>
+                                        </select>
+                                        :
+                                        <select id="minute">
+                                        <option>00</option><option>15</option><option>30</option><option>45</option>
+                                        </select>
+                                        <select id="ampm">
+                                        <option>AM</option>
+                                        <option>PM</option>
+                                        </select>
+                                        <button onclick="setTime()">OK</button>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="col-12">
                                 <textarea name="message" class="form-control border-0" rows="5" placeholder="Message" required></textarea>
@@ -788,7 +805,7 @@ coordinate with. A smooth and satisfying experience overall.</p>
 professional execution and strong project support. We work with commitment
 to deliver durable results and complete client satisfaction every time.</p>
                 <p><i class="fa fa-map-marker-alt me-2"></i>Bethpage, NY 11714</p>
-                <p><i class="fa fa-phone-alt me-2"></i>+134774453120</p>
+                <p><i class="fa fa-phone-alt me-2"></i>+1 3477445312</p>
                 <p><i class="fa fa-envelope me-2"></i>info.gpsnybuilders@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <!--<a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>-->
@@ -850,6 +867,22 @@ to deliver durable results and complete client satisfaction every time.</p>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        const input = document.getElementById("timeInput");
+        const dropdown = document.getElementById("timeDropdown");
+
+        input.addEventListener("click", () => {
+        dropdown.style.display = "block";
+        });
+
+        function setTime() {
+        const h = hour.value;
+        const m = minute.value;
+        const ap = ampm.value;
+        input.value = `${h}:${m} ${ap}`;
+        dropdown.style.display = "none";
+        }
+    </script>
 
 
 
