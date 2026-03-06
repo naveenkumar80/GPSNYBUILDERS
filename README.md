@@ -86,7 +86,6 @@ Images should be:
 **Naveen Kumar**
 
 - GitHub: [@naveenkumar80](https://github.com/naveenkumar80)
-- Portfolio: [Your Portfolio URL]
 - LinkedIn: [https://www.linkedin.com/in/naveen-k-6407b3132/]
 
 ## 📄 License
